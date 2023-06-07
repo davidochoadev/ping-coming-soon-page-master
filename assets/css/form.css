@@ -1,7 +1,7 @@
 .form__container {
    display: flex;
    flex-direction: column;
-   gap: .7em;
+   gap: .2em;
    width: 100%;  
 }
 
@@ -10,6 +10,14 @@
    width: 100%;
    border-radius: 3em;
    border: 1px solid var(--pale-blue);
+   z-index: 2;
+}
+
+.input__email:focus {
+   border:none;
+   outline: 1px solid var(--blue);
+   box-shadow: 0 0 10px var(--blue);
+   outline-offset: 1px;
 }
 
 .submitted{
@@ -33,6 +41,7 @@
 }
 
 .not-submitted::placeholder{
+   transition: .7s ease;
    color: var(--light-red);
    letter-spacing: .07em;
    font-weight: light;
@@ -59,3 +68,97 @@
    background-color: var(--very-dark-blue);
    color: var(--white);
 }
+
+/*
+   ALERT STYLING
+*/
+.visually-hidden {
+   margin-top: -.3em;
+   opacity: 0;
+}
+
+.is-showed {
+   z-index:0;
+   transition: .7s ease;
+   font-style: italic;
+   margin-top: .4em;
+   margin-bottom: .4em;
+   font-size: .9em;
+   text-align: center;
+   color: var(--light-red);
+
+}
+
+.not-showed {
+   z-index:0;
+   transition: .7s ease;
+   text-align: center;
+   margin-top: -.3em;
+   margin-bottom: -.3em;
+   font-size: .9rem;
+   font-style: italic;
+   color: var(--light-red);
+}
+
+.is-showed {
+	-webkit-animation: is-showed 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: is-showed 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.not-showed {
+	-webkit-animation: not-showed 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) reverse both;
+	        animation: not-showed 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) reverse both;
+}
+
+@-webkit-keyframes is-showed {
+   0% {
+     -webkit-transform: translateY(-10px);
+             transform: translateY(-10px);
+     opacity: 0;
+   }
+   100% {
+     -webkit-transform: translateY(0);
+             transform: translateY(0);
+     opacity: 1;
+   }
+ }
+ @keyframes is-showed {
+   0% {
+     -webkit-transform: translateY(-10px);
+             transform: translateY(-10px);
+     opacity: 0;
+   }
+   100% {
+     -webkit-transform: translateY(0);
+             transform: translateY(0);
+     opacity: 1;
+   }
+ }
+
+ @-webkit-keyframes not-showed {
+   0% {
+     -webkit-transform: translateY(-10px);
+             transform: translateY(-10px);
+     opacity: 0;
+   }
+   100% {
+     -webkit-transform: translateY(0);
+             transform: translateY(0);
+     opacity: 1;
+   }
+ }
+ @keyframes not-showed {
+   0% {
+     -webkit-transform: translateY(-10px);
+             transform: translateY(-10px);
+     opacity: 0;
+   }
+   100% {
+     -webkit-transform: translateY(0);
+             transform: translateY(0);
+     opacity: 1;
+   }
+ }
+ 
+ 
+ 

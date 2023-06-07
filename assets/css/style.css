@@ -1,4 +1,6 @@
 @import url('footer.css');
+@import url('form.css');
+@import url('main.css');
 
 :root {
    --blue: hsl(223, 87%, 63%);

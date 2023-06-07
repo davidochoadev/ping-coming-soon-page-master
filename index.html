@@ -10,7 +10,7 @@
   <!-- The og:description is used to specify the description of a web page when it is shared on social media platforms.-->
   <meta property="og:description" content="Ping Coming Soon Page solution by davidochoadev"/>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,17 @@
   <title>Frontend Mentor | Ping coming soon page</title>
 </head>
 <body>
-
+  <main class="main__container">
+    <form class="form__container" novalidate>
+      <!--
+      <input type="email" name="email" placeholder="Your email address..." class="input__email">
+      -->
+      <input type="text" name="email" placeholder="Your email address..." class="input__email">
+      <button type="submit" class="submit__button">
+        Notify Me
+      </button>
+    </form>
+  </main>
   We are launching soon!
 
   Subscribe and get notified
@@ -34,5 +44,6 @@
     <span class="author__spacer">|</span>
     <a href="https://github.com/davidochoadev/social-proof-section" class="author__anchor">Source Code</a>
   </footer>
+  <script src="./src/index.js" defer></script>
 </body>
 </html>

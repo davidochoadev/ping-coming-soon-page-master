@@ -1,4 +1,5 @@
 const mailInput = document.querySelector('input');
+const submitButton = document.querySelector('button');
 const form = document.querySelector('.form__container');
 
 form.addEventListener('submit', function(event) {
@@ -8,12 +9,12 @@ form.addEventListener('submit', function(event) {
    // Check if the email is valid
    if (regex.test(email)) {
       console.log(`The email: ${email} is valid`);
-      mailInput.classList.remove('not-submitted');
-      mailInput.classList.add('submitted');
+      submitButton.classList.remove('btn__not-submitted');
+      submitButton.classList.add('btn__submitted');
    } else {
       console.log(`The email: ${email} is not valid`);
-      mailInput.classList.remove('submitted');
-      mailInput.classList.add('not-submitted');
+      submitButton.classList.remove('btn__submitted');
+      submitButton.classList.add('btn__not-submitted');
    }
 });
 
@@ -23,15 +24,15 @@ mailInput.addEventListener('input', event => {
    let error = document.querySelector('#error-message');
    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
    if (regex.test(email)) {
-      console.log(`The email: ${email} is valid`);
       mailInput.classList.remove('not-submitted');
       mailInput.classList.add('submitted');
+      submitButton.classList.remove('btn__not-submitted');
       error.classList.remove('is-showed');
       error.classList.add('not-showed');
    } else {
-      console.log(`The email: ${email} is not valid`);
       mailInput.classList.remove('submitted');
       mailInput.classList.add('not-submitted');
+      submitButton.classList.add('btn__not-submitted');
       error.classList.remove('visually-hidden');
       error.classList.remove('not-showed');
       error.classList.add('is-showed');

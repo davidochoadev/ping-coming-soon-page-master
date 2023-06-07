@@ -1,6 +1,7 @@
 @import url('footer.css');
 @import url('form.css');
 @import url('main.css');
+@import url('pop-up.css');
 
 :root {
    --blue: hsl(223, 87%, 63%);

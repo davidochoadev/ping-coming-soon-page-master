@@ -30,5 +30,47 @@
 }
 
 .main__copyright {
+   font-size: .9rem;
+   color: var(--gray);
+   padding: 2rem 0;
    text-align: center;
 }
+
+/* 
+      SOCIALS CONTAINER
+   */
+   .socials__container {
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      margin-bottom: .6em;
+      max-height: fit-content;
+      align-items: flex-start;
+      padding: 0 1.5em;
+      color: var(--blue);
+   }
+   .facebook__container {
+      border: 1px solid var(--pale-blue);
+      padding: .4em .7em .4em .7em;
+      border-radius: 50%;
+      cursor: pointer;
+   }
+   
+   .twitter__container {
+      border: 1px solid var(--pale-blue);
+      padding: .4em .5em;
+      border-radius: 50%;
+      cursor: pointer;
+   }
+   
+   .instagram__container {
+      border: 1px solid var(--pale-blue);
+      padding: .4em .6em;
+      border-radius: 50%;
+      cursor: pointer;
+   }
+   
+   .hovering:hover{
+      background-color: var(--blue);
+      color: var(--white);
+   }

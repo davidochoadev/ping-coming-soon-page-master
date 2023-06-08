@@ -9,8 +9,7 @@
    padding: .6em;
    z-index: 1;
    width: 100%;
-   text-align: center;
-   background-color: var(--transparent-white);
+   text-align: left;
 }
 .author__section > * {
    color: var(--grayish-magenta);

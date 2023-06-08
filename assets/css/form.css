@@ -93,9 +93,15 @@
 /*
 -- ALERT STYLING
 */
+.error__message {
+   font-style: italic;
+   color: var(--light-red);
+   text-align: left;
+}
 .visually-hidden {
   margin-top: -0.3em;
   opacity: 0;
+  height:5px;
 }
    /* 
    -- ALERT IS SHOWED
@@ -107,7 +113,6 @@
       margin-top: 0.4em;
       margin-bottom: 0.4em;
       font-size: 0.9em;
-      text-align: center;
       color: var(--light-red);
    }
    .is-showed {
@@ -144,7 +149,6 @@
    .not-showed {
       z-index: 0;
       transition: 0.7s ease;
-      text-align: center;
       margin-top: -0.3em;
       margin-bottom: -0.3em;
       font-size: 0.9rem;
@@ -158,26 +162,50 @@
    }
 
    @-webkit-keyframes not-showed {
-   0% {
-      -webkit-transform: translateY(-10px);
-      transform: translateY(-10px);
-      opacity: 0;
-   }
-   100% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-      opacity: 1;
-   }
+      0% {
+         -webkit-transform: translateY(-10px);
+         transform: translateY(-10px);
+         opacity: 0;
+      }
+      100% {
+         -webkit-transform: translateY(0);
+         transform: translateY(0);
+         opacity: 1;
+      }
    }
    @keyframes not-showed {
-   0% {
-      -webkit-transform: translateY(-10px);
-      transform: translateY(-10px);
-      opacity: 0;
+      0% {
+         -webkit-transform: translateY(-10px);
+         transform: translateY(-10px);
+         opacity: 0;
+      }
+      100% {
+         -webkit-transform: translateY(0);
+         transform: translateY(0);
+         opacity: 1;
+      }
    }
-   100% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-      opacity: 1;
-   }
+
+
+   @media (min-width: 40rem) {
+      .form__container {
+         flex-direction: row;
+         gap: 0.2em;
+         width: 100%;
+         flex-wrap: wrap;
+      }
+      .input__email {
+         width: 64%;
+      }
+      .submit__button {
+         width: 35%;
+         order: 2;
+       }
+      .error__message__container {
+         order: 3;
+         flex-grow: 1;
+      }
+      .error__message {
+         padding-left: 1rem;
+      }
    }

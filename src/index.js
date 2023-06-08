@@ -95,6 +95,7 @@ mailInput.addEventListener('input', event => {
       submitButton.classList.remove('btn__not-submitted');
       error.classList.remove('is-showed');
       error.classList.add('not-showed');
+      error.classList.add('visually-hidden');
    } else {
       forgot.classList.remove('is-showed');
       forgot.classList.add('not-showed');

@@ -190,7 +190,7 @@
    @media (min-width: 40rem) {
       .form__container {
          flex-direction: row;
-         gap: 0.2em;
+         gap: 1rem;
          width: 100%;
          flex-wrap: wrap;
       }
@@ -198,7 +198,7 @@
          width: 64%;
       }
       .submit__button {
-         width: 35%;
+         width: 30%;
          order: 2;
        }
       .error__message__container {

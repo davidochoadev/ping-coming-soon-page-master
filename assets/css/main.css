@@ -13,6 +13,8 @@
 .main__img {
    width: 100%;
    padding: 2rem;
+   padding-bottom: 6rem;
+   padding-top: 4rem;
 }
 
 .main__title {
@@ -26,13 +28,13 @@
 
 .main__description {
    text-align: center;
-   padding: 2rem 0;
+   padding: .5rem 0;
 }
 
 .main__copyright {
    font-size: .9rem;
    color: var(--gray);
-   padding: 2rem 0;
+   padding: 1rem 0;
    text-align: center;
 }
 
@@ -46,7 +48,7 @@
       margin-bottom: .6em;
       max-height: fit-content;
       align-items: flex-start;
-      padding: 0 1.5em;
+      padding: .5rem;
       color: var(--blue);
    }
    .facebook__container {
